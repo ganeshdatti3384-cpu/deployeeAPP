@@ -32,7 +32,7 @@ jobs:
         key: ${{ secrets.EC2_KEY }}
         port: ${{ secrets.EC2_PORT }}
         script: |
-          docker pull ganeshdatti76/myapp:latest
-          docker stop myapp || true
-          docker rm myapp || true
-          docker run -d -p 9000:3000 --name myapp ganeshdatti76/myapp:latest
+          sudo docker pull ganeshdatti76/myapp:latest
+          sudo docker stop myapp || true
+          sudo docker rm myapp || true
+          sudo docker run -d -p 9000:3000 --name myapp ganeshdatti76/myapp:latest
